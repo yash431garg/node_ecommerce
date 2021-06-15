@@ -1,0 +1,22 @@
+<%- include('includes/head.ejs') %>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Shop</a></li>
+          <li><a href="/admin/add-product">Add product</a></li>
+        </ul>
+      </nav>
+    </header>
+    <% if (prod.length > 0) {%>
+    <h1>Hii there, Your cart is.....</h1>
+    <% for (let product of prod) {%>
+    <p><%= product %></p>
+    <% }%>
+    <% }else{%>
+      <p>No product found</p>
+      
+      <% }%>
+  </body>
+  <%- include('includes/end.ejs') %>
